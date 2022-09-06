@@ -5,6 +5,7 @@ sudo sbopkg -i runc
 sudo sbopkg -i go-md2man
 sudo sbopkg -i podman
 sudo sbopkg -i minikube
+sudo sbopkg -i cni-plugins
 
 
 
