@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: let-me-know-ui
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: let-me-know-ui
+  template:
+    metadata:
+      labels:
+        app: let-me-know-ui
+    spec:
+      containers:
+      - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+        name: let-me-know-ui
+        ports:
+        - containerPort: 80
